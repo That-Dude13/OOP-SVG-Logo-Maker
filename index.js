@@ -61,14 +61,16 @@ function init() {
 
     
     ])
+
+
    
-    // .then((-needs parameter-) => {
-    //     fs.writeFile("README.md", generateMarkdown(answers), (err) => {
-    //       if (err) {
-    //         console.error(err);
-    //       }
-    //     });
-    //   });
+    .then((answers) => {
+        fs.writeFile("shapes.svg", shapes.js(answers), (err) => {
+          if (err) {
+            console.error(err);
+          }
+        });
+      });
   }
   
   init();

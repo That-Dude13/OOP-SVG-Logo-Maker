@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const shapes = require("./lib/shapes");
+const shapes = require("./lib/shapes")
+const { white } = require("color-name");
 
 function init() {
   inquirer
@@ -17,49 +18,49 @@ function init() {
         type: "list",
         message: "What color would you like to display your text?",
         name: "color",
-        choices: ["blue, yellow, green, white"],
+        choices: ["blue", "yellow", "green", "white"],
       },
 
       {
         type: "list",
         message: "What would you like for your first shape?",
         name: "shape",
-        choices: ["Triangle, Circle, Square"],
+        choices: ["Triangle", "Circle", "Square"],
       },
 
       {
         type: "list",
         message: "What color would like the color of your first shape to be?",
         name: "color",
-        choices: ["blue, yellow, green, white"],
+        choices: ["blue", "yellow", "green", "white"],
       },
 
       {
         type: "list",
         message: "What would you like for your Second shape?",
         name: "shape",
-        choices: ["Triangle, Circle, Square"]
+        choices: ["Triangle", "Circle", "Square"],
       },
 
       {
         type: "list",
         message: "What color would like the color of your second shape to be?",
         name: "color",
-        choices: ["blue, yellow, green, white"],
+        choices: ["blue", "yellow", "green", "white"],
       },
 
       {
         type: "list",
         message: "What would you like for your third shape?",
         name: "shape",
-        choices: ["Triangle, Circle, Square"]
+        choices: ["Triangle", "Circle", "Square"],
       },
 
       {
         type: "list",
         message: "What color would like the color of your third shape to be?",
         name: "color",
-        choices: ["blue, yellow, green, white"],
+        choices: ["blue", "yellow", "green", "white"],
       },
 
     
@@ -68,7 +69,7 @@ function init() {
 
    
     .then((answers) => {
-        fs.writeFile("shapes.svg", shapes.js ({Shape}), (err) => {
+        fs.writeFile("shapes.svg", shapes.js(Shape=(new Circle,new Square,new Triangle)), (err) => {
           if (err) {
             console.error(err);
           }

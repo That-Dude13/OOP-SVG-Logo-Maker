@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const shapes = require("./lib/shapes")
-const { white } = require("color-name");
+
 
 function init() {
   inquirer
@@ -63,19 +63,37 @@ function init() {
         choices: ["blue", "yellow", "green", "white"],
       },
 
+      
+      
     
     ])
-
-
+    
+    
+  
+    
+    
+    .then ((answers) => {
+      const firstShape = new (eval(answers.firstShape))(answers.firstShapeColor);
+      const secondShape = new (eval(answers.secondShape))(answers.secondShapeColor);
+      const thirdShape = new (eval(answers.thirdShape))(answers.thirdShapeColor);
+    
+      const svgContent = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+          ${firstShape.render()}
+          ${secondShape.render()}
+          ${thirdShape.render()}
+        </svg>
+      `;
+    })
+      fs.writeFile("shapes.svg", svgContent, (err) => {
+        if (err)) {
+          console.error(err);}
+      
+      }
+      
+      
    
-    .then((answers) => {
-        fs.writeFile("shapes.svg", shapes.js(Shape=(new Circle,new Square,new Triangle)), (err) => {
-          if (err) {
-            console.error(err);
-          }
-        });
-      });
-  }
   
   init();
 
+      

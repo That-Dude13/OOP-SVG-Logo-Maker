@@ -67,12 +67,8 @@ function init() {
       
     
     ])
-  }
-    
-  
-    
-    
-    .then ((answers) => {
+
+    .then (answers => {
       const firstShape = new (eval(answers.firstShape))(answers.firstShapeColor);
       const secondShape = new (eval(answers.secondShape))(answers.secondShapeColor);
       const thirdShape = new (eval(answers.thirdShape))(answers.thirdShapeColor);
@@ -86,16 +82,20 @@ function init() {
       `;
     
 
-      fs.writeFile("shapes.svg", svgContent, (err) => {
+      fs.writeFile("shapes.svg"), svgContent, (err) => {
         if (err) {
           console.error(err);
-        }
-      
       }
       
+    
+        init();
+      }
+    });
+  }
+
       
   
-  
-  init();
+    
+ 
 
       

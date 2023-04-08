@@ -1,7 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const shapes = require("./lib/shapes");
-const test = require("./lib/shapes.test")
+const shapes = require("./shapes");
 
 function init() {
   inquirer
@@ -15,9 +14,10 @@ function init() {
       },
 
       {
-        type: "input",
+        type: "list",
         message: "What color would you like to display your text?",
-        name: "text",
+        name: "color",
+        choices: ["blue, yellow, green, white"],
       },
 
       {
@@ -28,9 +28,10 @@ function init() {
       },
 
       {
-        type: "input",
+        type: "list",
         message: "What color would like the color of your first shape to be?",
-        name: "text",
+        name: "color",
+        choices: ["blue, yellow, green, white"],
       },
 
       {
@@ -41,9 +42,10 @@ function init() {
       },
 
       {
-        type: "input",
+        type: "list",
         message: "What color would like the color of your second shape to be?",
-        name: "text",
+        name: "color",
+        choices: ["blue, yellow, green, white"],
       },
 
       {
@@ -54,9 +56,10 @@ function init() {
       },
 
       {
-        type: "input",
+        type: "list",
         message: "What color would like the color of your third shape to be?",
-        name: "text",
+        name: "color",
+        choices: ["blue, yellow, green, white"],
       },
 
     

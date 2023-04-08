@@ -24,42 +24,42 @@ function init() {
       {
         type: "list",
         message: "What would you like for your first shape?",
-        name: "shape",
+        name: "firstShape",
         choices: ["Triangle", "Circle", "Square"],
       },
 
       {
         type: "list",
         message: "What color would like the color of your first shape to be?",
-        name: "color",
+        name: "firstShapeColor",
         choices: ["blue", "yellow", "green", "white"],
       },
 
       {
         type: "list",
         message: "What would you like for your Second shape?",
-        name: "shape",
+        name: "secondShape",
         choices: ["Triangle", "Circle", "Square"],
       },
 
       {
         type: "list",
         message: "What color would like the color of your second shape to be?",
-        name: "color",
+        name: "secondShapeColor",
         choices: ["blue", "yellow", "green", "white"],
       },
 
       {
         type: "list",
         message: "What would you like for your third shape?",
-        name: "shape",
+        name: "thirdShape",
         choices: ["Triangle", "Circle", "Square"],
       },
 
       {
         type: "list",
         message: "What color would like the color of your third shape to be?",
-        name: "color",
+        name: "thirdShapeColor",
         choices: ["blue", "yellow", "green", "white"],
       },
 
@@ -84,10 +84,10 @@ function init() {
           ${thirdShape.render()}
         </svg>
       `;
-    })
+    
       fs.writeFile("shapes.svg", svgContent, (err) => {
-        if (err)) {
-          console.error(err);}
+        if (err) {
+          console.error(err);
       
       }
       

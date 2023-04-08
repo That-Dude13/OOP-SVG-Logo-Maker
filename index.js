@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const shapes = require("./lib/shapes")
+const {Circle, Triangle, Square} = require("./lib/shapes")
 
 
 function init() {
@@ -82,17 +82,12 @@ function init() {
       `;
     
 
-      fs.writeFile("shapes.svg"), svgContent, (err) => {
-        if (err) {
-          console.error(err);
-      }
-      
-    
-        init();
-      }
-    });
-  }
-
+      fs.writeFile("shapes.svg", svgContent, function(err, result) {
+        if(err) console.log('error', err);
+      });
+    })}
+  init();
+  
       
   
     

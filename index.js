@@ -67,7 +67,7 @@ function init() {
       
     
     ])
-    
+  }
     
   
     
@@ -85,14 +85,16 @@ function init() {
         </svg>
       `;
     
+
       fs.writeFile("shapes.svg", svgContent, (err) => {
         if (err) {
           console.error(err);
+        }
       
       }
       
       
-   
+  
   
   init();
 
